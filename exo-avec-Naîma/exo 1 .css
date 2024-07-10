@@ -1,0 +1,108 @@
+body{
+  background :linear-gradient(blue, pink) ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.custom-name{
+    width: calc(60% - 80px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 5px solid #ec7411;
+    border-radius: 5px;  
+    animation: animationTexte 5s; 
+    
+}
+.custom-name::before {
+  content: "👋";
+  display: inline-block;
+  animation: wave 0.8s infinite; 
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+    transform-origin:right;
+  }
+  25% {
+    transform: rotate(20deg);
+    transform-origin:unset;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+  75% {
+    transform: rotate(-20deg);
+    transform-origin: unset;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+}
+
+/* Animation pour l'affichage progressif du texte */
+@keyframes animationTexte {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.custom-age{
+    width: calc(45%);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 5px solid #dc0b0b;
+    /* animation: animeAge 5s; */
+   
+}
+/* Animation pour l'affichage progressif du texte */
+@keyframes animeAge {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.test2{
+  width: 500px;
+  border: 5px solid red;
+  
+}
+.custom-date{
+  width: calc(60% - 80px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 5px solid #ec7411;
+  border-radius: 5px;  
+  animation: animationTexte 5s; 
+  /* animation: vanishIn 2s infinite; */
+}
+
+
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(90px);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+.input{
+  box-shadow: 5px 5px 5px#dc0b0b;
+}
+
